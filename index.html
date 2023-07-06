@@ -7,14 +7,26 @@
     <link rel="stylesheet" href="etch-a-sketch.css">
     <script src="etch-a-sketch.js" defer></script>
 </head>
-<body>
-    <div class="settings">
-        <div class="slidecontainer">
-            <input type="range" min="1" max="100" value="16" class="slider" id="sizeSetting">
-            <div id="sliderValue"></div>
+<body ondragstart="return false;" ondrop="return false;">
+    <header>
+        <h1 class="title">Etch-a-Sketch</h1>
+    </header>
+    <div class="canvas">
+        <div class="settings">
+            <div class="colorPickerContainer">
+                <input type="color" id="drawColor" value="#000000">
+            </div>
+            <button class="button color active" id="btnColor">Color Mode</button>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="16" class="slider" id="sizeSetting">
+                <div id="sliderValue">16 x 16</div>
+            </div>
+            <button class="button rainbow" id="btnRainbow">Rainbow Mode</button>
+            <button class="button eraser" id="btnEraser">Eraser</button>
+            <button class="button reset" id="btnReset">Reset</button>       
         </div>
+        <div class="container"></div>
     </div>
-    <div class="container"></div>
     
 </body>
 </html>

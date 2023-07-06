@@ -1,37 +1,62 @@
 body {
     background-color: bisque;
 }
+.title{
+    font-size: 60px;
+}
+.canvas {
+    display:flex;
+    justify-content: center;
+
+}
+header {
+    display:flex;
+    padding: 40px 0;
+    /* background-color:#a77945; */
+   justify-content: center;
+}
+
+.settings {
+    /* flex-grow: 1; */
+    flex-basis:200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
 .container {
     display: grid;
     height: 500px;
-    width: 500px;
+    flex-basis: 500px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-.row {
-    display: flex;
-    width: auto;
-    height: auto;
-    border: none;
-    justify-content: center;
+    
 }
 
 .cell{
     width: auto;
     height: auto;
-    border: 1px solid rgba(25, 25, 25, .2);
+    /* border: 1px solid rgba(25, 25, 25, .2); */
     background-color: white;
+}
+
+#sliderValue {
+    text-align: center;
+    padding: 4px;
 }
 
 .slider {
     -webkit-appearance: none;
-    width: 25%;
-    height: 15px;
-    border-radius: 5px;  
+    width: 100%;
+    height: 8px;
+    border-radius: 10px;  
     background: #d3d3d3;
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px black;
   }
   
   .slider::-webkit-slider-thumb {
@@ -40,14 +65,64 @@ body {
     width: 25px;
     height: 25px;
     border-radius: 50%; 
-    background: #04AA6D;
+    background: #aa6204;
     cursor: pointer;
+    border: 2px solid black;
   }
   
   .slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #04AA6D;
+    background: #aa6204;
     cursor: pointer;
+  }
+  #drawColor {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    width: 96px;
+    height: 96px;
+    border: none;
+  }
+
+  .colorPickerContainer {
+
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 80px;
+    box-shadow: 2px 2px 2px black;
+  }
+  
+  .slidecontainer {
+    text-align: center;
+  }
+
+  .button {
+    background-color: bisque; /* Green */
+    border: 1px solid #aa6204;
+    color: black;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 14px;
+    box-shadow: 2px 2px 2px black;
+  }
+
+  .active {
+    background-color: #aa6204; /* Green */
+    border: 1px solid #aa6204;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 14px;
   }
